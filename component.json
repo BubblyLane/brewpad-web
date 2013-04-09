@@ -1,0 +1,11 @@
+{
+  "name": "brewpad-webapp",
+  "version": "0.0.1",
+  "dependencies": {
+    "requirejs": null,
+    "jquery": null,
+    "backbone-amd": null,
+    "lodash": null,
+    "handlebars": null
+  }
+}
