@@ -55,14 +55,19 @@ module.exports = (grunt) ->
   # Require.JS
   # #########################################################################
   # TODO: `package` Task
-  #  requirejs:
-  #    compile:
-  #      options:
-  #        mainConfigFile: "dist/js/build.js"
-  #        baseUrl: "dist/js"
-  #        name: "main"
-  #        include: ["build"]
-  #        out: "dist/src/js/main.min.js"
+    requirejs:
+      compile:
+        options:
+          mainConfigFile: "dist/js/build.js"
+          baseUrl: "dist/js"
+          name: "main"
+          include: ["build"]
+          out: "dist/js/compiled.min.js"
+
+          optimize: "uglify2"
+
+          uglify2:
+            warnings: true
 
   # #########################################################################
   # Connect Web Server
