@@ -1,0 +1,141 @@
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.inner-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/images/bg.jpg");
+  background-size: cover;
+}
+.page {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+.page .page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+}
+.page .page-header .btn-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110px;
+  height: 44px;
+  text-align: center;
+  cursor: pointer;
+  background-image: url("../../assets/images/woodbtn.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page .page-header .btn-home .text {
+  color: #ffffff;
+  margin-top: 10px;
+  display: inline-block;
+}
+.page .page-header .heading {
+  position: relative;
+  margin: 0 auto;
+  width: 448px;
+  height: 140px;
+  text-align: center;
+  background-image: url("../../assets/images/banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page .page-header .heading .text {
+  color: #ffffff;
+  font-size: 32px;
+  margin-top: 50px;
+  display: inline-block;
+}
+.page .page-body {
+  position: absolute;
+  top: 140px;
+  bottom: 140px;
+  left: 0;
+  right: 0;
+}
+.page .page-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+}
+#page-home .main-menu {
+  background-image: url("../assets/images/main-menu.png");
+  width: 497px;
+  height: 536px;
+  position: relative;
+  margin: 0 auto;
+}
+#page-home .button {
+  background-color: pink;
+  margin-bottom: 20px;
+  position: absolute;
+  width: 390px;
+  height: 80px;
+  left: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+#page-home .btn-label {
+  height: 20px;
+  top: 30px;
+  position: relative;
+}
+#page-home #btn-match-maker {
+  top: 120px;
+}
+#page-home #btn-featured {
+  top: 210px;
+}
+#page-home #btn-new-arrivals {
+  top: 300px;
+}
+#page-home #btn-about-us {
+  top: 390px;
+}
+#page-featured .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  text-align: center;
+}
+#page-featured .image img {
+  background-color: grey;
+  width: 300px;
+  height: 300px;
+}
+#page-featured .description {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 400px;
+}
+#page-featured .description h1 {
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+}
+#page-featured .description p {
+  font-size: 20px;
+  padding-right: 20px;
+}
