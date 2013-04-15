@@ -152,7 +152,6 @@ module.exports = (grunt) ->
           dest: "dist/plugins/"
         ]
 
-
   # #########################################################################
   # Grunt Plugins
   # #########################################################################
@@ -165,15 +164,21 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-contrib-requirejs"
   grunt.loadNpmTasks "grunt-contrib-watch"
 
-
   # #########################################################################
   # Tasks
   # #########################################################################
   grunt.registerTask "default", ["develop"]
 
-  grunt.registerTask "prepare", ["clean:dist", "copy:src", "copy:plugins"]
-  grunt.registerTask "compile-all",
-      ["coffee:compile", "handlebars:compile", "less:compile"]
-  grunt.registerTask "develop",
-      ["prepare", "compile-all", "connect:server", "watch"]
+  grunt.registerTask "compile-all", ["coffee:compile"
+                                     "handlebars:compile"
+                                     "less:compile"]
+
+  grunt.registerTask "prepare", ["clean:dist"
+                                 "copy:src"
+                                 "copy:plugins"
+                                 "compile-all"]
+
+  grunt.registerTask "develop", ["connect:server"
+                                 "watch"]
+
   grunt.registerTask "package", []

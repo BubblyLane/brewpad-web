@@ -15,7 +15,6 @@ define (require) ->
 
     featured_beers: ->
       console.log "match_maker"
-      console.log "App", App
       App.model.set "state": "featured"
 
     new_arrivals: ->
@@ -23,3 +22,4 @@ define (require) ->
 
     about_us: ->
       console.log "match_maker"
+      App.model.set "state": "about-us"

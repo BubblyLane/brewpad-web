@@ -1,6 +1,4 @@
-body {
-  background-color: #1c2c23;
-}
+@import "_variables";
 
 .container {
   position: absolute;
@@ -17,22 +15,25 @@ body {
   width: 100%;
   height: 100%;
 
-  overflow: auto;
-
   background-image: url("../assets/images/bg.jpg");
   background-size: cover;
 }
 
 .page {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: none;
-}
 
-.header {
-@import "_header";
+@import "pages/_page";
 }
 
 #page-home {
 @import "pages/_home";
+}
+
+#page-featured {
+@import "pages/_featured-beers";
 }
