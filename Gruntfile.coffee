@@ -64,10 +64,13 @@ module.exports = (grunt) ->
           mainConfigFile: "dist/js/build.js"
           baseUrl: "dist/js"
           name: "main"
-          include: ["build"]
+          include: ["requireLib", "build"]
           out: "dist/js/compiled.min.js"
 
           optimize: "uglify2"
+
+          paths:
+            requireLib: "../plugins/requirejs/require"
 
           uglify2:
             warnings: true
@@ -126,6 +129,7 @@ module.exports = (grunt) ->
     clean:
       dist: ["dist"]
       plugins: ["plugins"]
+      "package-prep": ["dist/plugins"]
 
   # #########################################################################
   # Copy
@@ -181,4 +185,6 @@ module.exports = (grunt) ->
   grunt.registerTask "develop", ["connect:server"
                                  "watch"]
 
-  grunt.registerTask "package", []
+  grunt.registerTask "package", ["prepare"
+                                 "requirejs"
+                                 "clean:package-prep"]
