@@ -1,8 +1,6 @@
-define ["models/app", "views/app-view"], (App, AppView) ->
+define (require) ->
+  Application = require "app"
+  AppRouter = require "app-router"
 
-
-  # Create the App
-  app = new App()
-
-  app_view = new AppView("model": app)
-  app_view.render()
+  new AppRouter()
+  Backbone.history.start()

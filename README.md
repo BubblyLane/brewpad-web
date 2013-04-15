@@ -49,15 +49,15 @@ The directory structure is setup in 2 phases: pre-compiled + post-compiled. The 
 	│   │   └── images
 	│   ├── coffee                        - CoffeeScript Code
 	│   │   ├── build.coffee              - Require.js Configuration
-	│   │   └── main.coffee               - Application Endpoint
+	│   │   └── app.coffee               - Application Endpoint
 	│   ├── css                           - CSS Code
 	│   ├── js                            - JS Code
 	│   ├── less                          - LESS Code
 	│   │   ├── _imported.less            - Exclude '_' prefixed files
 	│   │   └── app.less
 	│   └── templates                     - Handlebar Templates
-	├── tests                             - Tests
-	└── plugins                            - Bower Install Directory
+	├── test                              - Tests
+	└── plugins                           - Bower Install Directory
 	
 	
 Build Process

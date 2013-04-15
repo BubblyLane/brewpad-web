@@ -3,19 +3,24 @@ define (require) ->
   Backbone = require "backbone"
   Templates = require "templates/pages/match-maker"
 
+  require "templates/_header"
+
   class MatchMakerView extends Backbone.View
     attributes:
       "class": "page"
       "id": "page-match-maker"
 
     events:
-      "click .home": "on_click_home"
+      "click .btn-home": "on_click_home"
 
     initialize: ->
       @template = Templates["pages/match-maker"]
 
     render: =>
-      context = {}
+      context =
+        "title": "Beer Match Maker"
+        "title-id": "match-maker"
+
       html = @template context
       $(@el).html html
 

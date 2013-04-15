@@ -7,6 +7,9 @@ module.exports = (grunt) ->
   # #########################################################################
     coffee:
       compile:
+        options:
+          bare: true
+
         expand: true
         cwd: "src/coffee"
         src: "**/*.coffee"
@@ -169,6 +172,8 @@ module.exports = (grunt) ->
   grunt.registerTask "default", ["develop"]
 
   grunt.registerTask "prepare", ["clean:dist", "copy:src", "copy:plugins"]
-  grunt.registerTask "compile-all", ["coffee:compile", "handlebars:compile", "less:compile"]
-  grunt.registerTask "develop", ["prepare", "compile-all", "connect:server", "watch"]
+  grunt.registerTask "compile-all",
+      ["coffee:compile", "handlebars:compile", "less:compile"]
+  grunt.registerTask "develop",
+      ["prepare", "compile-all", "connect:server", "watch"]
   grunt.registerTask "package", []
